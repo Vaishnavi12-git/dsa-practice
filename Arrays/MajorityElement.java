@@ -3,6 +3,12 @@ import java.util.Arrays;
 
 class MajorityElement {
 
+// Brute Force approach 
+// Count frequency of each element using nested loops
+// If the frequency of any element > n/2 then return the element 
+// Time complexity is O(n^2) 
+// Space complexity is O(1)
+
     public static void bruteForce(int nums[]) {
         for(int i=0; i<nums.length; i++) {
             int ans = nums[i];
@@ -20,6 +26,13 @@ class MajorityElement {
         }
     }
 
+    // Optimize approach
+    // Sort the given array
+    // With the help of loop track the frequency of an element
+    // If the frequency is > n/2, return the element
+    // Time complexity is O(nlogn)
+    // Space complexity is O(1)
+
     public static void optimize(int nums[]) {
         Arrays.sort(nums);
         int freq = 1;
@@ -34,8 +47,13 @@ class MajorityElement {
                    System.out.println(nums[i]);
                 }
         }
-
     }
+
+// Moore's voting algorithm
+// Simply run a for loop on given array
+// If the current number is equal to the variable answer increase the frequency else decrease the frequency
+// Time complexity is O(n)
+//  // Space complexity is O(1)
 
     public static int mooreVoting(int nums[]) {
         int freq = 0;
