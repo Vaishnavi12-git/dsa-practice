@@ -17,7 +17,7 @@ class RepeatAndMissingNum {
                 }
             }
         }
-
+        
 // Find missing number 
         for(int i=1; i<freq.length; i++) {
             if(freq[i] == 0) {
