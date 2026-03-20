@@ -19,6 +19,7 @@ class NextPermutation {
         for(int i=n-1; i>index; i--) {
             if(nums[i] > nums[index]){
                 swap(nums, index, i);
+                break;
             }
         }
 
@@ -26,15 +27,18 @@ class NextPermutation {
         int end = n-1;
         while(start < end) {
             swap(nums, start, end);
+            start++;
+            end--;
         }
         return nums;
     }
 
      public static void main(String args[]) {
-        int[] nums = {1, 2, 3};
+        int[] nums = {2, 1, 5, 4, 3, 0, 0};
         nextPermutation(nums);
+
         for(int num : nums){
-            System.out.print(num);
+            System.out.print(num + " ");
         }
      }
 }
