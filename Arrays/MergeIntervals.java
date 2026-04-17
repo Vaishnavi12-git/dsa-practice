@@ -1,6 +1,9 @@
 import java.util.*;
 class MergeIntervals {
     public static int[][] mergeIntervals(int[][] intervals) {
+
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+
         List<int[]> result = new ArrayList();
         int[] current = intervals[0];
 
@@ -18,7 +21,7 @@ class MergeIntervals {
     }
 
     public static void main(String args[]) {
-        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        int[][] intervals = {{8, 10}, {1, 3}, {2, 6}, {15, 18}};
         System.out.println(Arrays.deepToString(mergeIntervals(intervals)));
     }
 }
