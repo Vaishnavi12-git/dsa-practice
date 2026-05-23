@@ -56,7 +56,7 @@ public static void merge(int[] arr, int start, int mid, int end){
 }
 
 public static void main(String args[]){
-    int[] arr = {6, 3, 9, 5, 2, 8, -2};
+    int[] arr = {6, 3, 9, 5, 2, 8, -4};
     mergeSort(arr, 0, arr.length-1);
     printArr(arr);
 }
